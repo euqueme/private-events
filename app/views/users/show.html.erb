@@ -1,7 +1,14 @@
-<h1><%= @user.name %> - <%= @user.lastname %></h1>
-<p>
-   email: <%= @user.email %>
-</p>
+<h1>Events</h1>
+
+<div>
+  <% @user.events.each do |e| %>
+   <p>
+      <%= e.description %>
+      <%= e.date %>
+      <%= e.venue %>
+   </p>
+   <% end %>
+</div>
 
 
 

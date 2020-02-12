@@ -1,0 +1,9 @@
+<h1>All Events</h1>
+
+<% @event.each do |e| %>
+<div>  
+
+   <h5> The Description <span><%= e.description %></span></h5>
+   <h5>The Creator<span><%= creator_name e.id %></span></h5>
+</div>
+<% end %>

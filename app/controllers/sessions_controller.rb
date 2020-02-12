@@ -2,13 +2,12 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    #user = User.find_by(id: params[:session][:id])
     user = User.find_by(id: params[:session][:ide])
     puts "this is it #{params[:session][:ide]}"
     if !user.nil?
       remember(user)
       flash[:info] = 'User Logged in'
-      redirect_to root_url
+      redirect_to user
     else
       flash.now[:danger] = 'User doesn\'t exist'
       render 'new'
