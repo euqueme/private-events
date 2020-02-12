@@ -30,6 +30,7 @@ module SessionsHelper
   def log_out
     forget(current_user)
     @current_user = nil
+    cookies.delete(:event_id)
   end
 
   def logged_in?

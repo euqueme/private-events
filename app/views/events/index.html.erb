@@ -1,9 +1,15 @@
 <h1>All Events</h1>
+<h2>Upcoming Events</h2>
+<% Event.upcoming.each do |e| %>
+<div>  
+   <%= link_to e.description, Event.find(e.id)  %>
+</div>
+<% end %>
 
-<% @event.each do |e| %>
+<h2>Past Events</h2>
+<% Event.past.each do |e| %>
 <div>  
 
-   <h5> The Description <span><%= e.description %></span></h5>
-   <h5>The Creator<span><%= creator_name e.id %></span></h5>
+<%= link_to e.description, Event.find(e.id)  %>
 </div>
 <% end %>

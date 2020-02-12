@@ -1,0 +1,13 @@
+<h1>New Invitation</h1>
+
+<div>
+  <div>
+    <%= form_for @invitation, url: {action: "create"} do |f| %>
+
+      <%= f.label :user %>
+      <%= f.text_field :user_id %>
+
+      <%= f.submit "Send Invite" %>
+    <% end %>
+  </div>
+</div>
