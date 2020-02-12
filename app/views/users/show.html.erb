@@ -1,12 +1,28 @@
-<h1>Events</h1>
-
+<h3> Events</h3>
+<h2> Upcoming Events</h2>
+<div>
+  <% upcoming_events.each do |e| %>
+      <%= e.description %> <br>
+      creator: <%= creator_name e.id %><br>
+      <%= e.date %><br>
+      <%= e.venue %><br>
+   <% end %>
+</div>
+<h2> Past Events</h2>
+<div>
+  <% past_events.each do |e| %>
+      <%= e.description %> <br>
+      creator: <%= creator_name e.id %><br>
+      <%= e.date %><br>
+      <%= e.venue %><br>
+   <% end %>
+</div>
+<h3> Created Events </h3>
 <div>
   <% @user.events.each do |e| %>
-   <p>
-      <%= e.description %>
+      <%= e.description %><br>
       <%= e.date %>
       <%= e.venue %>
-   </p>
    <% end %>
 </div>
 

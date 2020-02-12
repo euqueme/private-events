@@ -1,3 +1,14 @@
-<p>
-   <%= creator_name @event.id %>
-</p>
+
+<h1>Description: <%= @event.description %></h1>
+<h2>Creator: <%= creator_name @event.id %></h2>
+<h3> Attendees </h3>
+<div>
+   <% @event.attendees.each do |e| %>
+    <p>
+       <%= e.name %> <%=e.lastname %>
+    </p>
+    <% end %>
+ </div>
+
+<%= link_to "Create Event", new_event_path %>
+
