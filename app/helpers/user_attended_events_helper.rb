@@ -1,0 +1,2 @@
+module UserAttendedEventsHelper
+end

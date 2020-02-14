@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
     has_many :invitations
     has_many :invites, through: :invitations, source: :user 
+
 end

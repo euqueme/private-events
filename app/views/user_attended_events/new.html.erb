@@ -1,0 +1,10 @@
+<h1>UserAttendedEvents#new</h1>
+
+<div>
+  <%= form_for @user_attended_event, url: {action: "create"} do |f| %>
+
+    <p>You have been invited to this event</p>
+    
+    <%= f.submit "Accept?" %>
+  <% end %>
+</div>

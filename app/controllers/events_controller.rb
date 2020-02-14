@@ -9,7 +9,7 @@ class EventsController < ApplicationController
         if @event.save
             remember_event @event.id
             flash[:info] = 'Event Created'
-            redirect_to current_user
+            redirect_to @event
         else 
             flash[:info] = 'Event not Created'
             render 'new'
@@ -19,7 +19,7 @@ class EventsController < ApplicationController
 
     def show
         @event = Event.find(params[:id]) 
-
+        remember_event @event.id
     end
 
     def index

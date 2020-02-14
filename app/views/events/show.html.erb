@@ -9,7 +9,8 @@
     </p>
     <% end %>
  </div>
-
-<%= link_to "Create Event", new_event_path %>
+<% if @event.creator == current_user %>
 <%= link_to "Invite People", new_invitation_path %>
-
+<% elsif @event.invitees.find(current_user.id) == current_user %>
+<%= link_to "Accept Invitation", new_user_attended_event_path %>
+<% end %>

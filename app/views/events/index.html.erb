@@ -3,6 +3,9 @@
 <% Event.upcoming.each do |e| %>
 <div>  
    <%= link_to e.description, Event.find(e.id)  %>
+   <% if logged_in? && e.invitees.where(id: [current_user.id]) == [current_user] && e.attendees.where(id: [current_user.id]) == [] %>
+   <%= link_to "Accept invitation", Event.find(e.id) %>
+   <% end %>
 </div>
 <% end %>
 
