@@ -3,7 +3,7 @@
 <h2> Upcoming Events</h2>
 <div>
   <% upcoming_events.each do |e| %>
-      <%= e.description %> <br>
+     <%= link_to e.description, e %><br>
       creator: <%= creator_name e.id %><br>
       <%= e.date %><br>
       <%= e.venue %><br>
@@ -13,7 +13,7 @@
 <h2> Past Events</h2>
 <div>
   <% past_events.each do |e| %>
-      <%= e.description %> <br>
+   <%= link_to e.description, e %><br>
       creator: <%= creator_name e.id %><br>
       <%= e.date %><br>
       <%= e.venue %><br>
@@ -25,7 +25,7 @@
 <h3> Created Events </h3>
 <div>
   <% @user.events.each do |e| %>
-      <%= e.description %><br>
+      <%= link_to e.description, e %><br>
       <%= e.date %>
       <%= e.venue %>
    <% end %>

@@ -9,6 +9,8 @@ class Event < ApplicationRecord
 
      scope :past, -> { where("date < ?", Time.now) }
      scope :upcoming, -> { !past }
+
+     validates :description, presence: true
     # def past_events
     # current_user.attended_events.where("date < ?", Time.now)
     # end
