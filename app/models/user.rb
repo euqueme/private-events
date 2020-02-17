@@ -7,4 +7,8 @@ class User < ApplicationRecord
     has_many :invitations
     has_many :invites, through: :invitations, source: :user 
 
+    validates :name, presence: true
+    validates :lastname, presence: true
+
+
 end
