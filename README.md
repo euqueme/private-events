@@ -111,4 +111,4 @@ Project Link: [https://github.com/euqueme/private-events)
 [stars-url]: https://github.com/euqueme/private-events/stargazers
 [issues-shield]: https://img.shields.io/github/issues/euqueme/private-events.svg?style=flat-square
 [issues-url]: https://github.com/euqueme/private-events/issues
-[product-screenshot]: /app/assets/images/Private events.png
+[product-screenshot]: /app/assets/images/private-events.png
