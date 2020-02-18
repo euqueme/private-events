@@ -1,5 +1,8 @@
-
+<% if logged_in? %>
+<h2>Description: <%= @event.description %></h2>
+<% else %>
 <h1>Description: <%= @event.description %></h1>
+<% end %>
 <h2>Creator: <%= creator_name @event.id %></h2>
 <h3> Attendees </h3>
 <div>
@@ -9,7 +12,7 @@
     </p>
     <% end %>
  </div>
-<% if is_creator? %>
+<% if creator? %>
 <%= link_to "Invite People", new_invitation_path %>
 <% elsif logged_in? && accepted_invitation?(@event)%>
 

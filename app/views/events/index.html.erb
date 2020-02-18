@@ -1,7 +1,11 @@
+<% if logged_in? %>
+<h2>All Events</h2>
+<% else %>
 <h1>All Events</h1>
-<h2>Upcoming Events</h2>
+<% end %>
+<h3>Upcoming Events</h2>
 <% Event.upcoming.each do |e| %>
-<div>  
+<div id="posts">  
    <%= link_to e.description, e  %>
    <% if logged_in? && accepted_invitation?(e) %>
    <%= link_to "Accept invitation", e %>
@@ -9,9 +13,9 @@
 </div>
 <% end %>
 
-<h2>Past Events</h2>
+<h3>Past Events</h2>
 <% Event.past.each do |e| %>
-<div>  
+<div id="posts">  
 
 <%= link_to e.description, e  %>
 </div>

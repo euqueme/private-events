@@ -1,24 +1,25 @@
 <header >
   <div >
     <nav>
-      <ul >
        <% if logged_in? %>
+        <ul>
           <h1> <%= current_name %> </h1>
-          <li>
-          <%= link_to 'Create new event', new_event_path %>
+          <li class="h_li">
+          <%= link_to 'Create new event', new_event_path, class: 'new_article h_a' %>
           </li>
-          <li>
-          <%= link_to 'My events', current_user %>
+          <li class="h_li">
+          <%= link_to 'My events', current_user, class: 'new_article h_a' %>
           </li>
-          <li>
-            <%= link_to "Log out", logout_path, method: :delete %>
+          <li class="h_li">
+            <%= link_to "Log out", logout_path, method: :delete, class: 'new_article h_a' %>
           </li>
         <% else %>
-          <li><%= link_to "Log in", login_path %></li>
-          <li><%= link_to "Sign up", signup_path %></li>
+        <ul class="h_ul">
+          <li class="h_li"><%= link_to "Log in", login_path, class: 'new_article h_a' %></li>
+          <li class="h_li"><%= link_to "Sign up", signup_path, class: 'new_article h_a' %></li>
         <% end %>
-          <li>
-          <%= link_to 'All events', root_path %>
+          <li class="h_li">
+          <%= link_to 'All events', root_path, class: 'new_article h_a' %>
           </li>
       </ul>
     </nav>
