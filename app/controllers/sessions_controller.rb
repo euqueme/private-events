@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
   def destroy
     if logged_in?
       log_out
-      flash[:info] = 'User logged out.'
+      flash[:info] = 'User Logged out.'
     else
       flash[:info] = "User wasn't even logged in."
     end
