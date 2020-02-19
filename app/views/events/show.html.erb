@@ -1,7 +1,11 @@
 <% if logged_in? %>
 <h2>Description: <%= @event.description %></h2>
+<h3>Venue: <%= @event.venue %></h3>
+<h3>Date: <%= @event.date %></h3>
 <% else %>
-<h1>Description: <%= @event.description %></h1>
+<h1><%= @event.description %></h1>
+<h3>Venue: <%= @event.venue %></h3>
+<h3>Date: <%= @event.date %></h3>
 <% end %>
 <h2>Creator: <%= creator_name @event.id %></h2>
 <h3> Attendees </h3>

@@ -4,9 +4,6 @@
 <div>
   <% upcoming_events.each do |e| %>
      <%= link_to e.description, e %><br>
-      creator: <%= creator_name e.id %><br>
-      <%= e.date %><br>
-      <%= e.venue %><br>
    <% end %>
 </div>
 
@@ -14,9 +11,6 @@
 <div>
   <% past_events.each do |e| %>
    <%= link_to e.description, e %><br>
-      creator: <%= creator_name e.id %><br>
-      <%= e.date %><br>
-      <%= e.venue %><br>
    <% end %>
 </div>
 <% end %>
@@ -26,8 +20,6 @@
 <div>
   <% @user.events.each do |e| %>
       <%= link_to e.description, e %><br>
-      <%= e.date %>
-      <%= e.venue %>
    <% end %>
 </div>
 <% end %>

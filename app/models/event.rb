@@ -10,7 +10,7 @@ class Event < ApplicationRecord
   has_many :invitees, through: :invitations, source: :user
 
   scope :past, -> { where('date < ?', Time.now) }
-  scope :upcoming, -> { !past }
+  scope :upcoming, -> { where('date >= ?', Time.now).or(where('date IS NULL')) }
 
   validates :description, presence: true
 end

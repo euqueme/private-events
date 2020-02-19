@@ -10,7 +10,13 @@
 
       <%= f.label :description %>
       <%= f.text_field :description %>
-      
+
+      <%= f.label :venue %>
+      <%= f.text_field :venue %>
+
+      <%= f.label :date %><br>
+      <%= f.date_field :date, as: :date, value: f.object.try(:strftime,"%m/%d/%Y") %> <br><br>
+
       <%= f.submit "Create my event" %>
     <% end %>
   </div>
