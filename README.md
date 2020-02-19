@@ -65,11 +65,16 @@ This is also part of the Odin project curriculum https://www.theodinproject.com/
 If you want to test it you need to have Ruby and Rails installed in your computer and clone or [download](https://github.com/euqueme/private-events/archive/master.zip) this repo as follows:
 * `$ git clone "https://github.com/euqueme/private-events.git"`
 
-after that you need to open a terminal inside the repo and run the rails server
+after that you need to open a terminal inside the repo and run the bundler
+* `$ bundler  install --without production`
+
+then, run rails db:migrate. This creates the database with the corresponding tables, columns and associations.
+* `$ rails db:migrate`
+
+start the server
 * `$ rails server`
 
-and finally in a different terminal inside the repo run the script
-* `$ ruby app/script/rest_requestor.rb`
+finally you have to open it in the [browser](http://localhost:3000/) , Sign up, sign in, create new events and invite people.
 
 
 ### Built With
