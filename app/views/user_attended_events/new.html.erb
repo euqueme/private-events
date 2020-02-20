@@ -1,0 +1,10 @@
+<h2>Invitation Letter</h2>
+
+<div>
+  <%= form_for @user_attended_event, url: {action: "create"} do |f| %>
+
+    <p>You have been invited to this event</p>
+    
+    <%= f.submit "Accept?" %>
+  <% end %>
+</div>
