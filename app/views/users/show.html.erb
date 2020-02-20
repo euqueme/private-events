@@ -1,0 +1,29 @@
+<h3> Events</h3>
+<% if @user.attended_events.any? %>
+<h2> Upcoming Events</h2>
+<div>
+  <% upcoming_events.each do |e| %>
+     <%= link_to e.description, e %><br>
+   <% end %>
+</div>
+
+<h2> Past Events</h2>
+<div>
+  <% past_events.each do |e| %>
+   <%= link_to e.description, e %><br>
+   <% end %>
+</div>
+<% end %>
+
+<% if @user.events.any? %>
+<h3> Created Events </h3>
+<div>
+  <% @user.events.each do |e| %>
+      <%= link_to e.description, e %><br>
+   <% end %>
+</div>
+<% end %>
+<%= link_to "Create an event?", new_event_path %>
+
+
+

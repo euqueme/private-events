@@ -1,0 +1,24 @@
+<% if logged_in? %>
+<h2>Description: <%= @event.description %></h2>
+<h3>Venue: <%= @event.venue %></h3>
+<h3>Date: <%= @event.date %></h3>
+<% else %>
+<h1><%= @event.description %></h1>
+<h3>Venue: <%= @event.venue %></h3>
+<h3>Date: <%= @event.date %></h3>
+<% end %>
+<h2>Creator: <%= creator_name @event.id %></h2>
+<h3> Attendees </h3>
+<div>
+   <% @event.attendees.each do |e| %>
+    <p>
+       <%= e.name %> <%=e.lastname %>
+    </p>
+    <% end %>
+ </div>
+<% if creator? %>
+<%= link_to "Invite People", new_invitation_path %>
+<% elsif logged_in? && accepted_invitation?(@event)%>
+
+<%= link_to "Accept Invitation", new_user_attended_event_path %>
+<% end %>
