@@ -17,6 +17,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+![Hireable](https://cdn.rawgit.com/hiendv/hireable/master/styles/default/yes.svg)
 
 <!-- PROJECT LOGO -->
 <br />
@@ -44,7 +45,10 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
-* [Contact](#contact)
+  * [Usage](#usage)
+  * [Automated Test](#automated-test)
+* [Author](#author)
+* [Contributing](#contributing)
 * [Acknowledgements](#acknowledgements)
 
 <!-- ABOUT THE PROJECT -->
@@ -58,9 +62,19 @@ This is the seventh Microverse project of the Ruby on Rails Curriculum
 
 This is also part of the Odin project curriculum https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations
 
+### Built With
+This project was built using these technologies.
+* Ruby 2.6.3
+* Rails 6.0.2.1
+* Rspec
+* Capybara
+* Rubocop
+* Ubuntu 18.4+
+* Stickler
+* VsCode
 
 <!-- ABOUT THE PROJECT -->
-## Instalation
+### Usage
 
 If you want to test it you need to have Ruby and Rails installed in your computer and clone or [download](https://github.com/euqueme/private-events/archive/master.zip) this repo as follows:
 * `$ git clone "https://github.com/euqueme/private-events.git"`
@@ -76,27 +90,41 @@ start the server
 
 finally you have to open it in the [browser](http://localhost:3000/) , Sign up, sign in, create new events and invite people.
 
+### Automated Test
 
-### Built With
-This project was built using these technologies.
-* Ruby 2.6.3
-* Rails 6.0.2.1
-* Rspec
-* Capybara
-* Rubocop
-* Ubuntu 18.4+
-* Stickler
-* VsCode
+to run the test cases run the following commands
+
+Model test cases:
+
+```$ rspec spec/model/```
+
+Integration test cases:
+
+```$ rspec spec/integration/```
 
 <!-- CONTACT -->
-## Contact
+## Author
 
-Audrey Emmanuella Odiaka - [@o___audrey_xo](https://twitter.com/o___audrey_xo) - [@audrey-ella-xo](https://github.com/audrey-ella-xo) - anitaudrey@gmail.com
-<br />
-<br />
-María Eugenia Quemé - [@MaruKK](https://twitter.com/MaruKK) - [@euqueme](https://github.com/euqueme) - euqueme@gmail.com
+👤 **Audrey Emmanuella Odiaka** 
+- Twitter: [@o___audrey_xo](https://twitter.com/o___audrey_xo) 
+- Github: [@audrey-ella-xo](https://github.com/audrey-ella-xo) 
+- Gmail: anitaudrey@gmail.com
 
-Project Link: [https://github.com/euqueme/private-events)
+👤 **María Eugenia Quemé** 
+
+- Twitter: [@MaruKK](https://twitter.com/MaruKK) 
+- Github: [@euqueme](https://github.com/euqueme) 
+- Gmail: euqueme@gmail.com
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/euqueme/private-events/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
