@@ -96,7 +96,7 @@ to run the test cases run the following commands
 
 Model test cases:
 
-```$ rspec spec/model/```
+```$ rspec spec/models/```
 
 Integration test cases:
 
