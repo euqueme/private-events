@@ -80,7 +80,7 @@ If you want to test it you need to have Ruby and Rails installed in your compute
 * `$ git clone "https://github.com/euqueme/private-events.git"`
 
 after that you need to open a terminal inside the repo and run the bundler
-* `$ bundler  install --without production`
+* `$ bundle  install --without production`
 
 then, run rails db:migrate. This creates the database with the corresponding tables, columns and associations.
 * `$ rails db:migrate`
